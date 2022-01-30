@@ -41,12 +41,10 @@ body{
     border-radius: 5px;
 }
 
-/* heading aligned center */
-
 .heading{
-    text-align : center;
+    text-align: center;
     font-size: 55px;
-    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: 'PT Sans Narrow', sans-serif;
     color: white;
     user-select: none;
 }
@@ -152,7 +150,9 @@ img{
         height: 350px;
     }
     .heading{
-        font-size: 45px;
+        position: relative;
+        top: -25px;
+        font-size: 35px;
     }
     img{
         width: 50px;
