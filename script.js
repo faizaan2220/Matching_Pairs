@@ -5,10 +5,7 @@ let cardOne, cardTwo;
 let dis = false;
 
 let matchedCard = 0;
-
-// time val changed
-
-let timeVal = 40;
+let timeVal = 45;
 let counter;
 
 function timeOver() {
@@ -18,14 +15,14 @@ function timeOver() {
 }
 
 function startTimer(time) {
-    counter = setInterval(timer, 1000);
+    counter = setInterval(timer, 700);
     function timer() {
         countTime.textContent = time;
         time--;
         if (time < 0) {
             clearInterval(counter);
             countTime.textContent = "00";
-            setInterval(timeOver, 1000);
+            setInterval(timeOver, 700);
         }
     }
 }
@@ -53,10 +50,10 @@ function matchCards(img1, img2) {
         matchedCard++;
         if (matchedCard == 8) {
             clearInterval(counter);
-            setTimeout(timeOver,4000);
+            setTimeout(timeOver,2500);
             setTimeout(() => {
                 return shuffleCard();
-            }, 4000);
+            }, 2500);
         }
         cardOne.removeEventListener("click", flipCard);
         cardTwo.removeEventListener("click", flipCard);
@@ -67,14 +64,14 @@ function matchCards(img1, img2) {
     setTimeout(() => {
         cardOne.classList.add("shake");
         cardTwo.classList.add("shake");
-    }, 400)
+    }, 300)
 
     setTimeout(() => {
         cardOne.classList.remove("shake", "flip");
         cardTwo.classList.remove("shake", "flip");
         cardOne = cardTwo = "";
         dis = false;
-    }, 1200)
+    }, 900)
 }
 
 function shuffleCard() {
