@@ -5,7 +5,7 @@ let cardOne, cardTwo;
 let dis = false;
 
 let matchedCard = 0;
-let timeVal = 50;
+let timeVal = 40;
 let counter;
 
 function timeOver() {
